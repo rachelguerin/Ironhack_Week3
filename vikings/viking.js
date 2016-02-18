@@ -1,3 +1,9 @@
+var Saxon = function(){
+	this.name = 'Saxon';
+	this.health = parseInt(Math.random() * 50);
+	this.strength = parseInt(Math.random() * 50);
+}
+
 var Viking = function(name,health,strength){
 	this.name = name;
 	this.health = health;
@@ -6,7 +12,7 @@ var Viking = function(name,health,strength){
 }
 
 var Pit = function(name,turns){
-	this.name = name
+	this.name = name;
 	this.players = [];
 	this.turns = turns;
 	
@@ -25,8 +31,8 @@ Pit.prototype.attack = function(){
 	damage = attacker.strength * 0.2;
 	defender.health -= damage;
 	console.log(attacker.name+" has attacked "+defender.name+".");
-	console.log(defender.name+" has suffered "+damage+" damage. His health is now "+defender.health+".");
 	if (defender.health > 5){
+		console.log(defender.name+" has suffered "+damage+" damage. His health is now "+defender.health+".");
 		return true;
 	}
 	else{
@@ -54,14 +60,15 @@ Pit.prototype.fight = function(){
 	console.log("The fight is OVER. The winner is " + winner.name);
 }
 
-var vlad = new Viking('Vlad',20,20);
-
+var vlad = new Viking('Vlad',25,25);
 var ragnar = new Viking('Ragnar',20,20);
+
+var saxon = new Saxon();
 
 var elgin = new Pit("Elgin",10);
 
 elgin.add_player(vlad);
-elgin.add_player(ragnar);
+elgin.add_player(saxon);
 elgin.print_status();
 elgin.fight();
 
