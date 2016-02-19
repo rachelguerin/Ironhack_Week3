@@ -1,0 +1,43 @@
+html {
+	font-size: 62.5%;
+    
+}
+
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+header {
+	font-size: 2rem;
+}
+
+header nav {
+	font-size: 1.5rem;
+}
+
+header nav a {
+	color: #838383;
+}
+
+header nav .selected {
+	color: #EE5B4B;
+}
+
+img {
+	/*margin: 10%;*/
+	width: 100%;
+} 
+
+footer {
+	background-color: #606060;
+	width: 100%;
+	padding: 1rem 3rem 1rem 6rem;
+}
+
+footer h3 {
+	color: #fff;
+}
+
+footer p {
+	color: #aaa;
+}

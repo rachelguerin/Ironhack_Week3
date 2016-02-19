@@ -1,5 +1,5 @@
 function ceasarCipher (message,shift) {
-	shift = shift || 3
+	shift = shift || 3;
 	return message.split('').map(function (char){
 		return isUpper(char) || isLower(char)
 			? getChar(char,shift)
@@ -31,4 +31,4 @@ function isLower(char) {
 }
 
 
-console.log(ceasarCipher("Et tu, brute?",6));
+console.log(ceasarCipher("Et tu, brute?",-6));
