@@ -1,0 +1,13 @@
+.container {
+	background-repeat: no-repeat;
+	background-image: url("image.jpg");
+	height: 250px;
+	width: 300px;
+	background-size: 100%;
+}
+
+@media screen and (min-width: 800px) {
+	.container {
+		background-image: url("larger-image.jpg")
+	}
+}
